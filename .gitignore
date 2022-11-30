@@ -1,2 +1,5 @@
 experiments
 .idea
+checkpoints
+data
+__pycache__
