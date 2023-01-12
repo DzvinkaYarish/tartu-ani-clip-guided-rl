@@ -65,11 +65,33 @@ display = Display(visible=0, size=(400, 300))
 display.start()
 ```
 
+### CLIP
+
+CLIP requires additional Python modules to work.
+
+```commandline
+!git clone https://github.com/DzvinkaYarish/tartu-ani-clip-guided-rl.git
+!cp -r /content/tartu-ani-clip-guided-rl/utils.py /content
+```
+
+Weights can be found [here](https://github.com/mlfoundations/open_clip/releases/tag/v0.2-weights). 
+CLIP will download them automatically
+
 ### CLOOB
 
 CLOOB requires additional Python modules to work.
 
 ```commandline
 !git clone https://github.com/DzvinkaYarish/tartu-ani-clip-guided-rl.git
+!cp -r /content/tartu-ani-clip-guided-rl/utils.py /content
 !cp -r /content/tartu-ani-clip-guided-rl/cloob /content
+```
+
+Weights can be found [here](https://ml.jku.at/research/CLOOB/downloads/checkpoints/). 
+You have to download them manually.
+
+```commandline
+!mkdir checkpoints
+!wget https://ml.jku.at/research/CLOOB/downloads/checkpoints/cloob_rn50_yfcc_epoch_28.pt
+!mv /content/cloob_rn50_yfcc_epoch_28.pt /content/checkpoints/cloob_rn50_yfcc_epoch_28.pt
 ```
