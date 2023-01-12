@@ -22,16 +22,15 @@ For *Windows*, you will also need to install [Mujoco](https://www.roboti.us/inde
 - Enable Win32 long paths
 - run `pip install gym[all]` again
 
-## TODO
-- [ ] Setup anaconda yaml file to quickly install all necessary dependencies
-- [ ] Add instructions on how to download model weights   
-
 ## Experiments
- - 2 environments: CartPole and LunarLander
- - clip models: openclip https://github.com/mlfoundations/open_clip(different models), cloob https://github.com/ml-jku/cloob
- - different prompts
-     - try several prompts at the same time which describe different states and then the rwd is formulated based on to which prompt the env image is most similar
-     - ...
+
+### Models
+ - [CLIP](https://github.com/mlfoundations/open_clip)
+ - [CLOOB](https://github.com/ml-jku/cloob)
+
+### Environments
+- [CartPole](https://www.gymlibrary.dev/environments/classic_control/cart_pole/)
+- [LunarLander](https://www.gymlibrary.dev/environments/box2d/lunar_lander/)
 
 ## Colab
 
