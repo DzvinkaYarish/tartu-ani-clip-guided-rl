@@ -29,8 +29,9 @@ For *Windows*, you will also need to install [Mujoco](https://www.roboti.us/inde
  - [CLOOB](https://github.com/ml-jku/cloob)
 
 ### Environments
-- [CartPole](https://www.gymlibrary.dev/environments/classic_control/cart_pole/)
-- [LunarLander](https://www.gymlibrary.dev/environments/box2d/lunar_lander/)
+- [Cart Pole](https://www.gymlibrary.dev/environments/classic_control/cart_pole/)
+- [Lunar Lander](https://www.gymlibrary.dev/environments/box2d/lunar_lander/)
+- [Mountain Car](https://www.gymlibrary.dev/environments/classic_control/mountain_car/)
 
 ## Colab
 
@@ -96,7 +97,7 @@ You have to download them manually.
 !mv /content/cloob_rn50_yfcc_epoch_28.pt /content/checkpoints/cloob_rn50_yfcc_epoch_28.pt
 ```
 
-### How to modify Gym environment by populating it with images
+## How to modify Gym environment by populating it with images
 
 Gym Box2D environments are quite minimalistic, and it is unlikely CLIP has seen images like that during training. 
 This minimalism might confuse CLIP which as a result will produce incorrect similarity scores. 
