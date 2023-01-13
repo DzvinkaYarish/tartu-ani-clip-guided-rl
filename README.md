@@ -120,7 +120,8 @@ inside `rendering.py` ("\<venv\>/envs/ani/Lib/site-packages/gym/envs/classic_con
 ```
 3. Open the desired environment code (e.g. "\<venv\>/envs/ani/Lib/site-packages/gym/envs/box2d/lunar_lander.py")
 4. We only need to change the `render` method since that is what returns the image
-5. Just before the return draw the necessary images with the following code.
+5. Just before the return draw the necessary images with the following code. Here we draw the image and apply transformation `t` that moves the 
+image to coordinates `x` and `y` and then rotates the image by `angle` (radians).
 ```python
 t = rendering.Transform(
     translation=(x, y),
@@ -132,8 +133,6 @@ self.viewer.draw_image(
     width, height
 ).add_attr(t)
 ```
-Here we draw the image and apply transformation `t` that moves the 
-image to coordinates `x` and `y` and then rotates the image by `angle` (radians).
 6. A complete example for Lunar Lander that replaces the shape-ship with a cat can be found below. 
 You need to replace the `render` method with the following code.
 ```python
@@ -197,7 +196,7 @@ You need to replace the `render` method with the following code.
                 color=(0.8, 0.8, 0),
             )
 
-        x, y = centroid(ship)
+        x, y = LunarLander.centroid(ship)
         height = 3.4
         width = 3.4
 
@@ -221,4 +220,18 @@ You need to replace the `render` method with the following code.
         _x = sum(_x_list) / _len
         _y = sum(_y_list) / _len
         return _x, _y
+```
+7. You can test that your code works by running the following script
+```python
+import gym
+import matplotlib.pyplot as plt
+
+ENV_NAME = 'LunarLander-v2'
+env = gym.make(ENV_NAME)
+env.reset()
+img = env.render(mode="rgb_array")
+
+plt.imshow(img)
+plt.show()
+env.close()
 ```
