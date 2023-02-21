@@ -1,5 +1,7 @@
 # CLIP-Guided RL
 
+### Blog post detailing our experiments and findings: https://medium.com/@vaiciu.donatas/clip-is-all-rl-needs-fdb30eedbab9
+
 ## Installation
 ```bash
 conda create --name ani python=3.8
